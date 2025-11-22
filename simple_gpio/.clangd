@@ -1,0 +1,20 @@
+CompileFlags:
+  CompilationDatabase: build
+  Add:
+    - --target=riscv32-esp-elf
+    - -D__ELF__
+  Remove:
+    - -mabi=*
+    - -march=*
+    - -m*
+    - -f*
+
+Diagnostics:
+  ClangTidy:
+    Remove:
+      - modernize-*
+      - readability-*
+  UnusedIncludes: None
+
+Index:
+  Background: Build
